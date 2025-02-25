@@ -250,39 +250,38 @@ constant C_MENU_OSMPAUSE      : natural := 2;
 constant C_MENU_OSMDIM        : natural := 3;
 constant C_FLIP_JOYS          : natural := 4;
 constant C_MENU_ROT90         : natural := 8;
-constant C_MENU_FLIP          : natural := 9;
-constant C_MENU_CRT_EMULATION : natural := 10;
-constant C_MENU_HDMI_16_9_50  : natural := 14;
-constant C_MENU_HDMI_16_9_60  : natural := 15;
-constant C_MENU_HDMI_4_3_50   : natural := 16;
-constant C_MENU_HDMI_5_4_50   : natural := 17;
+constant C_MENU_CRT_EMULATION : natural := 9;
+constant C_MENU_HDMI_16_9_50  : natural := 13;
+constant C_MENU_HDMI_16_9_60  : natural := 14;
+constant C_MENU_HDMI_4_3_50   : natural := 15;
+constant C_MENU_HDMI_5_4_50   : natural := 16;
 
-constant C_MENU_VGA_STD       : natural := 23;
-constant C_MENU_VGA_15KHZHSVS : natural := 27;
-constant C_MENU_VGA_15KHZCS   : natural := 28;
+constant C_MENU_VGA_STD       : natural := 22;
+constant C_MENU_VGA_15KHZHSVS : natural := 26;
+constant C_MENU_VGA_15KHZCS   : natural := 27;
 
-constant C_MENU_DECO          : natural := 34;
+constant C_MENU_DECO          : natural := 33;
 
 -- DECO DIPs
 -- Dipswitch A
-constant C_MENU_DECO_DSWA_0 : natural := 37;
-constant C_MENU_DECO_DSWA_1 : natural := 38;
-constant C_MENU_DECO_DSWA_2 : natural := 39;
-constant C_MENU_DECO_DSWA_3 : natural := 40;
-constant C_MENU_DECO_DSWA_4 : natural := 41;
-constant C_MENU_DECO_DSWA_5 : natural := 42;
-constant C_MENU_DECO_DSWA_6 : natural := 43;
-constant C_MENU_DECO_DSWA_7 : natural := 44;
+constant C_MENU_DECO_DSWA_0 : natural := 36;
+constant C_MENU_DECO_DSWA_1 : natural := 37;
+constant C_MENU_DECO_DSWA_2 : natural := 38;
+constant C_MENU_DECO_DSWA_3 : natural := 39;
+constant C_MENU_DECO_DSWA_4 : natural := 40;
+constant C_MENU_DECO_DSWA_5 : natural := 41;
+constant C_MENU_DECO_DSWA_6 : natural := 42;
+constant C_MENU_DECO_DSWA_7 : natural := 43;
 
 -- Dipswitch B
-constant C_MENU_DECO_DSWB_0 : natural := 46;
-constant C_MENU_DECO_DSWB_1 : natural := 47;
-constant C_MENU_DECO_DSWB_2 : natural := 48;
-constant C_MENU_DECO_DSWB_3 : natural := 49;
-constant C_MENU_DECO_DSWB_4 : natural := 50;
-constant C_MENU_DECO_DSWB_5 : natural := 51;
-constant C_MENU_DECO_DSWB_6 : natural := 52;
-constant C_MENU_DECO_DSWB_7 : natural := 53;
+constant C_MENU_DECO_DSWB_0 : natural := 45;
+constant C_MENU_DECO_DSWB_1 : natural := 46;
+constant C_MENU_DECO_DSWB_2 : natural := 47;
+constant C_MENU_DECO_DSWB_3 : natural := 48;
+constant C_MENU_DECO_DSWB_4 : natural := 49;
+constant C_MENU_DECO_DSWB_5 : natural := 50;
+constant C_MENU_DECO_DSWB_6 : natural := 51;
+constant C_MENU_DECO_DSWB_7 : natural := 52;
 
 
 -- Burnin'Rubber specific video processing
@@ -334,7 +333,7 @@ constant C_320_288_50 : video_modes_t := (
    ASPECT      => "01",       -- aspect ratio: 01=4:3, 10=16:9: "01" for SVGA
    PIXEL_REP   => '0',        -- no pixel repetition
    H_PIXELS    => 320,        -- horizontal display width in pixels
-   V_PIXELS    => 240,        -- vertical display width in rows
+   V_PIXELS    => 256,        -- vertical display width in rows
    H_PULSE     => 28,         -- horizontal sync pulse width in pixels
    H_BP        => 28,         -- horizontal back porch width in pixels
    H_FP        => 8,          -- horizontal front porch width in pixels

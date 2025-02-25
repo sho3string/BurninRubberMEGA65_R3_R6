@@ -318,7 +318,7 @@ constant OPTM_S_SAVING     : string := "<Saving>";          -- the internal writ
 --             Do use a lower case \n. If you forget one of them or if you use upper case, you will run into undefined behavior.
 --          2. Start each line that contains an actual menu item (multi- or single-select) with a Space character,
 --             otherwise you will experience visual glitches.
-constant OPTM_SIZE         : natural := 58;  -- amount of items including empty lines:
+constant OPTM_SIZE         : natural := 57;  -- amount of items including empty lines:
                                              -- needs to be equal to the number of lines in OPTM_ITEMS and amount of items in OPTM_GROUPS
                                              -- IMPORTANT: If SAVE_SETTINGS is true and OPTM_SIZE changes: Make sure to re-generate and
                                              -- and re-distribute the config file. You can make a new one using M2M/tools/make_config.sh
@@ -338,7 +338,6 @@ constant OPTM_ITEMS        : string :=
    " Display Settings\n"    &
    "\n"                     &
    " Rotate screen 90\n"    &
-   " Flip screen 180\n"     &
    " HDMI: CRT emulation\n" &
    " HDMI: %s\n"            &
    " HDMI Settings\n"       &
@@ -397,29 +396,28 @@ constant OPTM_G_OSDO            : integer := 1;
 constant OPTM_G_DIMV            : integer := 2;
 constant OPTM_G_HDMI            : integer := 3;
 constant OPTM_G_ROT90           : integer := 4;
-constant OPTM_G_FLIP            : integer := 5;
-constant OPTM_G_CRT             : integer := 6;
+constant OPTM_G_CRT             : integer := 5;
 -- Midway DIPS --
 -- Dipswitch B
-constant OPTM_G_DECO_DSWB0      : integer := 7;
-constant OPTM_G_DECO_DSWB1      : integer := 8;
-constant OPTM_G_DECO_DSWB2      : integer := 9;
-constant OPTM_G_DECO_DSWB3      : integer := 10;
-constant OPTM_G_DECO_DSWB4      : integer := 11;
-constant OPTM_G_DECO_DSWB5      : integer := 12;
-constant OPTM_G_DECO_DSWB6      : integer := 13;
-constant OPTM_G_DECO_DSWB7      : integer := 14;
+constant OPTM_G_DECO_DSWB0      : integer := 6;
+constant OPTM_G_DECO_DSWB1      : integer := 7;
+constant OPTM_G_DECO_DSWB2      : integer := 8;
+constant OPTM_G_DECO_DSWB3      : integer := 9;
+constant OPTM_G_DECO_DSWB4      : integer := 10;
+constant OPTM_G_DECO_DSWB5      : integer := 11;
+constant OPTM_G_DECO_DSWB6      : integer := 12;
+constant OPTM_G_DECO_DSWB7      : integer := 13;
 -- Dipswitch A
-constant OPTM_G_DECO_DSWA0      : integer := 15;
-constant OPTM_G_DECO_DSWA1      : integer := 16;
-constant OPTM_G_DECO_DSWA2      : integer := 17;
-constant OPTM_G_DECO_DSWA3      : integer := 18;
-constant OPTM_G_DECO_DSWA4      : integer := 19;
-constant OPTM_G_DECO_DSWA5      : integer := 20;
-constant OPTM_G_DECO_DSWA6      : integer := 21;
+constant OPTM_G_DECO_DSWA0      : integer := 14;
+constant OPTM_G_DECO_DSWA1      : integer := 15;
+constant OPTM_G_DECO_DSWA2      : integer := 16;
+constant OPTM_G_DECO_DSWA3      : integer := 17;
+constant OPTM_G_DECO_DSWA4      : integer := 18;
+constant OPTM_G_DECO_DSWA5      : integer := 19;
+constant OPTM_G_DECO_DSWA6      : integer := 20;
 constant OPTM_G_DECO_DSWA7      : integer := 22;
-constant OPTM_G_FLIPJ           : integer := 23;
-constant OPTM_G_VGA_MODES       : integer := 24;
+constant OPTM_G_FLIPJ           : integer := 22;
+constant OPTM_G_VGA_MODES       : integer := 23;
 
 -- !!! DO NOT TOUCH !!!
 type OPTM_GTYPE is array (0 to OPTM_SIZE - 1) of integer range 0 to 2**OPTM_GTC- 1;
@@ -436,7 +434,6 @@ constant OPTM_GROUPS       : OPTM_GTYPE := ( OPTM_G_TEXT + OPTM_G_HEADLINE,     
                                              OPTM_G_TEXT + OPTM_G_HEADLINE,                             -- Headline "HDMI Mode""
                                              OPTM_G_LINE,                                               -- Line
                                              OPTM_G_ROT90 + OPTM_G_SINGLESEL + OPTM_G_STDSEL,           -- Rotate On/Off toggle ("Single Select")
-                                             OPTM_G_FLIP  + OPTM_G_SINGLESEL,                           -- Flip   On/Off toggle ("Single Select")
                                              OPTM_G_CRT   + OPTM_G_SINGLESEL + OPTM_G_STDSEL,           -- CRT emulation On/Off toggle ("Single Select")
                                              OPTM_G_SUBMENU,                                            -- HDMI Settings Submenu start
                                              OPTM_G_TEXT + OPTM_G_HEADLINE,                             -- HDMI Settings

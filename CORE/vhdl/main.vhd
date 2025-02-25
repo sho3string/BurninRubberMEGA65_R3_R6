@@ -85,10 +85,7 @@ architecture synthesis of main is
 signal keyboard_n        : std_logic_vector(79 downto 0);
 signal pause_cpu         : std_logic;
 signal status            : signed(31 downto 0);
-signal flip_screen       : std_logic;
-signal flip              : std_logic := '0';
-signal video_rotated     : std_logic;
-signal rotate_ccw        : std_logic := flip_screen;
+signal flip_screen       : std_logic := '0';
 signal direct_video      : std_logic;
 signal forced_scandoubler: std_logic;
 signal gamma_bus         : std_logic_vector(21 downto 0);
@@ -115,7 +112,6 @@ signal options          : std_logic_vector(1 downto 0);
 
 constant C_MENU_OSMPAUSE     : natural := 2;
 constant C_MENU_OSMDIM       : natural := 3;
-constant C_MENU_FLIP         : natural := 9;
 
 -- Game player inputs
 constant m65_1             : integer := 56; --Player 1 Start
@@ -145,7 +141,6 @@ begin
     
     options(0) <= osm_control_i(C_MENU_OSMPAUSE);
     options(1) <= osm_control_i(C_MENU_OSMDIM);
-    flip_screen <= osm_control_i(C_MENU_FLIP);
 
     i_brubber : entity work.burnin_rubber
     port map (
