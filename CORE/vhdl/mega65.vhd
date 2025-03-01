@@ -387,6 +387,17 @@ begin
    cart_a_o             <= (others => '0');
    cart_d_o             <= (others => '0');
    
+   main_joy_1_up_n_o    <= '1';
+   main_joy_1_down_n_o  <= '1';
+   main_joy_1_left_n_o  <= '1';
+   main_joy_1_right_n_o <= '1';
+   main_joy_1_fire_n_o  <= '1';
+   main_joy_2_up_n_o    <= '1';
+   main_joy_2_down_n_o  <= '1';
+   main_joy_2_left_n_o  <= '1';
+   main_joy_2_right_n_o <= '1';
+   main_joy_2_fire_n_o  <= '1';
+   
    -- Configure the LEDs:
    -- Power led on and green, drive led always off
    main_power_led_o       <= '1';
