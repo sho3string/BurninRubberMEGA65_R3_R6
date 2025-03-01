@@ -85,7 +85,6 @@ architecture synthesis of main is
 signal keyboard_n        : std_logic_vector(79 downto 0);
 signal pause_cpu         : std_logic;
 signal status            : signed(31 downto 0);
-signal flip_screen       : std_logic := '0';
 signal direct_video      : std_logic;
 signal forced_scandoubler: std_logic;
 signal gamma_bus         : std_logic_vector(21 downto 0);
